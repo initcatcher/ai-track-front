@@ -75,7 +75,7 @@ export const Homepage = () => {
         <div className="text-center mb-8">
           <div className="text-6xl mb-4">💕</div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-            연애인 유재석
+            연예인 유재석
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300">
             국민 MC와 편안하고 재미있는 대화를 나눠보세요
