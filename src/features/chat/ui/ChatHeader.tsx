@@ -20,7 +20,7 @@ export const ChatHeader = ({ onClearChat }: ChatHeaderProps) => {
             <span className="text-2xl">💕</span>
             <div>
               <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                연애인 유재석
+                연예인 유재석
               </h1>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 국민 MC와 따뜻한 대화를 나눠보세요
