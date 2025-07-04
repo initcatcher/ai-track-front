@@ -48,7 +48,7 @@ export const MessageBubble = ({ message }: MessageBubbleProps) => {
           ) : (
             <ReactMarkdown
               components={{
-                em: ({ node, ...props }) => <strong {...props} />,
+                em: ({ ...props }) => <strong {...props} />,
               }}
             >
               {message.text}
