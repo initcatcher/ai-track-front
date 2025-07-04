@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Track - 실시간 AI 채팅 애플리케이션
 
-## Getting Started
+AI채팅 기능을 제공하는 풀스택 웹 애플리케이션입니다. FastAPI 백엔드와 Next.js 프론트엔드로 구성되어 있으며, LLM 모델을 활용한 실시간 스트리밍 기능을 제공합니다.
 
-First, run the development server:
+![HOME](home_screen.png)
+![CHAT](chat_screen.png)
+
+## 📋 프로젝트 개요
+
+- **프론트엔드**: Next.js 15 + React 19 + TypeScript
+
+- **실시간 통신**: Server-Sent Events (SSE)
+- **스타일링**: Tailwind CSS 4.0
+
+## 🚀 빠른 시작
+
+### 1️⃣ 사전 준비사항
+
+다음 도구들이 설치되어 있어야 합니다:
+
+- **Node.js 18+** (프론트엔드용)
+- **PNPM** (Node.js 패키지 매니저)
+
+### 4️⃣ 프론트엔드 클라이언트 설정 및 실행
+
+새 터미널을 열고:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# client 디렉토리로 이동
+cd client
+
+# 의존성 설치
+pnpm install
+
+# 개발 서버 실행 (Turbopack 사용)
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+브라우저에서 http://localhost:3000 으로 접속하세요.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 API 엔드포인트
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 프론트엔드 페이지 (http://localhost:3000)
 
-## Learn More
+- `/chat` - AI 채팅 기능
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ 개발 가이드
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 프로젝트 구조
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+ client/                 # Next.js 프론트엔드
+ ├── src/
+ │   ├── app/           # App Router 페이지
+ │   └── components/    # 재사용 가능한 컴포넌트
+ ├── public/            # 정적 파일
+ ├── package.json       # 프론트엔드 의존성
+ └── README.md
+```
 
-## Deploy on Vercel
+### 프론트엔드 개발
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### 새로운 의존성 추가
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+cd client
+pnpm add 패키지명
+```
+
+#### 개발 도구
+
+```bash
+cd client
+
+# 타입 체크
+pnpm build
+
+# 린팅
+pnpm lint
+
+# 프로덕션 빌드
+pnpm build && pnpm start
+```
