@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import { Message } from "../entities";
 
 interface MessageBubbleProps {
@@ -45,7 +46,13 @@ export const MessageBubble = ({ message }: MessageBubbleProps) => {
               <span className="text-sm">유재석님이 답변 중...</span>
             </div>
           ) : (
-            message.text
+            <ReactMarkdown
+              components={{
+                em: ({ node, ...props }) => <strong {...props} />,
+              }}
+            >
+              {message.text}
+            </ReactMarkdown>
           )}
         </div>
 
